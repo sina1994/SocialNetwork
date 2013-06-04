@@ -1,0 +1,27 @@
+# Create your views here.
+from User.models import User_account
+from django.http import HttpResponse, HttpResponseRedirect
+from django.core.context_processors import csrf
+from django.shortcuts import render_to_response, render
+
+def get_info(request):
+    if request.method == 'POST':
+        if request.POST['passwd']!=request.POST['cpasswd']:
+            return render(request,'signup.html',{'error':'The confirmed password does not match the first one'})
+        new_user = User_account.objects.create(first_name=request.POST['first_name'],last_name=request.POST['last_name'],e_mail=request.POST['e_mail'],passwd=request.POST['passwd'])
+        new_user.save()
+    return HttpResponse("your account was built")
+
+
+
+
+
+def signin(request):
+    if request.method != 'POST':
+        return render(request, 'login.html', {'error': 'Email or Password is incorrect'})
+	
+    user_profile = User_account.objects.filter(e_mail = request.POST['user_email'], passwd = request.POST['password'])     
+    if user_profile:
+        return render(request, 'next.html')
+    else:
+        return render(request, 'login.html', {'error': 'Email or Password is incorrect'})

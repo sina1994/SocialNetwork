@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FriendShip</title>
+        <meta name="description" content="FriendShip Social Network">
+        <meta name="keyword" content="FriendShip, Social, Network, Sign up">
+        <meta name="author" content="sina_deadwood">
+        <link rel="stylesheet" type="text/css" href="{% static "/static/style.css" %}">
+        <style>
+            <!-- empty -->
+        </style>
+    </head>
+    
+    <body>
+    <h1> FriendShip </h1>
+        <div class="form">
+        <h2> Sign Up </h2>
+        <div class="line"> </div>
+	{%if error %}
+		<h3 style="color:red;">{{error}}</h3>
+	{% endif %}
+        <form class="input-form" action="/next/" method="post">{% csrf_token %}
+            <input type="text" name="first_name" required placeholder="First name">
+            <input type="text" name="last_name" required placeholder="Last name">
+            <input type="text" name="e_mail" required placeholder="Email">
+            <input type="password" name="passwd" required placeholder="Password">
+            <input type="password" name="cpasswd" required placeholder="Confirm password">
+            <h4><input type="checkbox" required > I agree with the <a href="#">Terms of servis</a></h4>
+            <input type="submit" class="sign" value="Sign Up">
+            <p> Already have an account? 
+            <a href="/"> Sign in</a> </p>
+        </form>
+        </div>
+    </body>
+    
+</html>
