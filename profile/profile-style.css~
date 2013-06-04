@@ -1,0 +1,234 @@
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
+/* navigation bar: */
+.nav-header
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: #ffffff;
+    height: 40px;
+    padding-top: 15px;
+    
+    -webkit-box-shadow: 0px 0px 8px 0px #000000;
+    -moz-box-shadow: 0px 0px 8px 0px #000000;
+    box-shadow: 0px 0px 8px 0px #000000;
+    
+    background-color: rgba(255, 0, 0, 1)/*rgba(1, 1, 1, 0.8)*/;
+    color: rgba(1, 1, 1, 0.8);
+}
+
+.nav-icon
+{
+    position: absolute;
+    left: 120px;
+    display: block;
+    margin-left: 20px;
+    width: 100px;
+    float: left;
+}
+
+.nav-icon img
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    opacity: 0.5;
+    margin-top: -3px;
+}
+
+.nav-icon img:hover
+{
+    opacity: 1;
+}
+
+.nav-logo
+{
+    position: relative;
+    float: left;
+    font: 32px WakeUp;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -5px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-search form
+{
+    position: relative;
+    left: 180px;
+    width: 400px;
+}
+
+.nav-search input[type="text"]
+{
+    display: block;
+    float: left;
+    width: 0;
+    height: 25px;
+    padding: 0;
+    background: #838383;
+    color: #c8c8c8;
+    border: none;
+    border-radius: 3px;
+
+    -webkit-transition: all .3s ease 2s;
+    -moz-transition: all .3s ease 2s;
+    -o-transition: all .3s ease 2s;
+    -ms-transition: all .3s ease 2s;
+    transition: all .3s ease 2s;
+}
+
+.nav-search input[type="submit"]
+{
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    background: url(search.png) no-repeat center center;
+    margin-left: 5px;
+    margin-top: -3px;
+    opacity: 0.5;
+}
+
+.nav-search:hover input[type="text"]
+{
+    width: 200px;
+    padding: 0 10px;
+    
+    -webkit-transition: all .3s ease .1s;
+    -moz-transition: all .3s ease .1s;
+    -o-transition: all .3s ease .1s;
+    -ms-transition: all .3s ease .1s;
+    transition: all .3s ease .1s;
+}
+
+.nav-search:hover input[type="submit"]
+{
+    opacity: 1;
+}
+
+.nav-option
+{
+    position: relative;
+    left: 970px;
+    width: 280px;
+    height: 30px;
+    margin-top: 0px;
+}
+
+.nav-option user
+{
+    position: absolute;
+    left: 10px;
+    margin-right: 5px;
+    color: #ffffff;
+    float: left;
+    font-size: 20px;
+    margin-top: 4px;
+}
+
+.nav-option img
+{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: no-repeat center center;
+    float: left;
+    right: 5px;
+    left: 200px;
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+.nav-option img:hover
+{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.nav-option ul
+{
+    list-style: none;
+}
+
+.nav-option li
+{
+    margin: 4px 3px 4px 3px;
+    
+    -webkit-transition: all .3s ease .1s;
+    -moz-transition: all .3s ease .1s;
+    -o-transition: all .3s ease .1s;
+    -ms-transition: all .3s ease .1s;
+    transition: all .3s ease .1s;
+}
+
+.nav-option li:hover
+{
+    background-color: #808080;
+}
+
+.nav-option a
+{
+    text-decoration: none;
+    color: #000000;
+    
+    -webkit-transition: all .3s ease .1s;
+    -moz-transition: all .3s ease .1s;
+    -o-transition: all .3s ease .1s;
+    -ms-transition: all .3s ease .1s;
+    transition: all .3s ease .1s;
+}
+
+.nav-option li:hover a
+{
+    color: #ffffff;
+}
+
+.nav-option > ximg > ul 
+{
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    width: 150px;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    background-color: #ffffff;
+    border: 1px solid #838383;
+    border-radius: 4px;
+    padding: 3px 3px 3px 5px;
+    
+    -webkit-transition: all .3s ease .3s;
+    -moz-transition: all .3s ease .3s;
+    -o-transition: all .3s ease .3s;
+    -ms-transition: all .3s ease .3s;
+    transition: all .3s ease .3s;
+}
+
+.nav-option > ximg:hover > ul
+{
+    top: 15px;
+    left: 80px;
+    opacity: 1;
+    visibility: visible;
+    
+    -webkit-transition: all .3s ease .1s;
+    -moz-transition: all .3s ease .1s;
+    -o-transition: all .3s ease .1s;
+    -ms-transition: all .3s ease .1s;
+    transition: all .3s ease .1s;
+}
+
+@font-face
+{
+    font-family: WakeUp;
+    src: url(WakingUp.ttf);
+}
